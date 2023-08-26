@@ -56,14 +56,14 @@ button {
 }
 
 .container {
-     width: 35px;
+     width: 345px;
      background: #fff;
      height: 100vh;
 }
 
 ul {
     list-style: none;
-    margin-top: 20px;
+    margin-top: 50px;
 }
 ul li {
     padding: 15px;
@@ -71,7 +71,6 @@ ul li {
     background: #00B775;
     margin-top: 10px;
     color: #FFF;
-    border-radius: 5px;
     cursor: pointer;
     position: relative;
 }
