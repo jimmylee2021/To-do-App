@@ -73,6 +73,7 @@ ul li {
     color: #FFF;
     cursor: pointer;
     position: relative;
+    user-select: none;
 }
 li.checked {
     text-decoration: line-through;

@@ -3,10 +3,17 @@ let txt = document.getElementById("input-el")
 let btn = document.getElementById("btn")
 let list = document.getElementById("list")
 
-btn.addEventListener("click", ()=>{
+btn.addEventListener("click",()=>{
     add()
     txt.value = ""
-    saveData()
+saveData()
+})
+
+txt.addEventListener("keyup", function(event){
+       event.preventDefault();
+       if (event.key === "Enter") {
+        document.getElementById("btn").click()
+       }
 })
 
 function add() {
@@ -17,6 +24,7 @@ function add() {
           let newEl = document.createElement("li")
           newEl.innerHTML = txt.value 
           list.appendChild(newEl)
+
 
           let spanEl = document.createElement("span")
           spanEl.innerHTML = "\u00d7"
@@ -35,6 +43,7 @@ list.addEventListener("click", function(e){
     }
 
 }, false)
+
 
 function saveData() {
     localStorage.setItem("data", list.innerHTML)
